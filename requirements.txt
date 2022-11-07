@@ -1,3 +1,5 @@
+
+scipy
 geoviews
 xarray
 tensorflow

@@ -6,4 +6,3 @@ pysal
 splot 
 hvplot 
 geoviews
-shapely --no-binary --upgrade --force-reinstall

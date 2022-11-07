@@ -1,7 +1,6 @@
 geopandas
 descartes
 urbanaccess 
-pandana 
 pysal
 splot 
 hvplot 

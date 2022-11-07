@@ -1,5 +1,4 @@
-
 scipy
 geoviews
 xarray
-tensorflow
+tensorflow=2.10.0

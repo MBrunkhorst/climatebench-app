@@ -84,9 +84,9 @@ def main():
         download_file(filename)
 
     # Get the temperature  and uncertainty from the emulator
-    temperature, uncertainty = climatebench_gp(co2, ch4, so2, bc)
+#     temperature, uncertainty = climatebench_gp(co2, ch4, so2, bc)
     x, y = np.linspace(0, 360, 144), np.linspace(-90, 90, 96)
-    dataset = xr.DataArray(temperature, coords={'latitude': (('latitude',), y), 'longitude': (('longitude',), x)})
+    dataset = xr.DataArray(np.zeros((144, 96)), coords={'latitude': (('latitude',), y), 'longitude': (('longitude',), x)})
 
     # Draw the header and image.
     st.subheader("Real-time Climate Simulations")

@@ -1,0 +1,9 @@
+git+git://github.com/geopandas/geopandas.git
+descartes
+urbanaccess 
+pandana 
+pysal
+splot 
+hvplot 
+geoviews
+shapely --no-binary --upgrade --force-reinstall

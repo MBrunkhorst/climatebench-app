@@ -1,0 +1,7 @@
+python3-cartopy
+gdal-bin 
+python3-gdal
+python3-rtree
+libgdal-dev 
+libproj-dev
+libgeos-dev

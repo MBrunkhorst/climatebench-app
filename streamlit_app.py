@@ -96,7 +96,7 @@ def main():
 
 
     air_temperature = gv.Dataset(dataset, ['longitude', 'latitude'], 'air_temperature')
-    fig = gv.render((air_temperature.to.image().options(cmap="coolwarm", clim=(-6., 6.))).options(projection=ccrs.Robinson()))
+    fig = gv.render((air_temperature.to.image().options(cmap="coolwarm", clim=(-6., 6.)))
 
     st.bokeh_chart(fig, use_container_width=True)
 

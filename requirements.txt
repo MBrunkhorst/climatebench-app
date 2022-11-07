@@ -2,4 +2,4 @@ scipy
 geoviews
 xarray
 tensorflow
-streamlit==1.12
+streamlit

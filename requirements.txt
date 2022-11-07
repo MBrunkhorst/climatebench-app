@@ -1,7 +1,1 @@
-geopandas
-descartes
-urbanaccess 
-pysal
-splot 
-hvplot 
 geoviews

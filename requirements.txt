@@ -1,1 +1,3 @@
 geoviews
+xarray
+tensorflow

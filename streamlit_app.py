@@ -96,9 +96,9 @@ def main():
 
 
     air_temperature = gv.Dataset(dataset, ['longitude', 'latitude'], 'air_temperature')
-    fig = gv.render((air_temperature.to.image().options(cmap="coolwarm", clim=(-6., 6.))), backend='bokeh')
+#     fig = gv.render((), backend='bokeh')
 
-    st.bokeh_chart(fig, use_container_width=True)
+    st.bokeh_chart(air_temperature.to.image().options(cmap="coolwarm", clim=(-6., 6.)), use_container_width=True)
 
 # This sidebar UI lets the user select parameters for ClimateBench.
 def emissions_ui():

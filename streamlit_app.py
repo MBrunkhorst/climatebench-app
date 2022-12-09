@@ -94,7 +94,7 @@ def main():
     
 #     dataset.plot(ax=ax, cmap='coolwarm')
 
-#     st.pyplot(fig)
+    st.pyplot(fig)
     
 #     # Draw the header and image.
     st.subheader("Real-time Climate Simulations")

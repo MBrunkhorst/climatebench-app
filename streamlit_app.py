@@ -8,8 +8,9 @@ import numpy as np
 import tensorflow as tf
 
 import xarray as xr
-import geoviews as gv
-import geoviews.feature as gf
+# import geoviews as gv
+# import geoviews.feature as gf
+import matplotlib.pyplot as plt
 from cartopy import crs as ccrs
 
 max_co2 = 9500.

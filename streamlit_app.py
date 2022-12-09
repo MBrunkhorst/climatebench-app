@@ -89,16 +89,21 @@ def main():
     x, y = np.linspace(0, 360, 144), np.linspace(-90, 90, 96)
     dataset = xr.DataArray(temperature, coords={'latitude': (('latitude',), y), 'longitude': (('longitude',), x)})
 
-    # Draw the header and image.
-    st.subheader("Real-time Climate Simulations")
-    # st.markdown("**ClimateBench Emulator** (CO2 `%3.1f`) (CH4 `%3.1f`)" % (co2, ch4))
-    st.markdown(f"Global mean temperature change: {global_mean(dataset):3.1f}K +/- {uncertainty:3.1f}K")
+    fig, ax = plt.subplots(subplot_kw={'projection': ccrs.PlateCarree()}, figsize=(11,8.5))
+    
+    dataset.plot(ax=ax, cmap='coolwarm')
 
+    st.pyplot(fig)
+    
+#     # Draw the header and image.
+#     st.subheader("Real-time Climate Simulations")
+#     # st.markdown("**ClimateBench Emulator** (CO2 `%3.1f`) (CH4 `%3.1f`)" % (co2, ch4))
+#     st.markdown(f"Global mean temperature change: {global_mean(dataset):3.1f}K +/- {uncertainty:3.1f}K")
 
-    air_temperature = gv.Dataset(dataset, ['longitude', 'latitude'], 'air_temperature')
-#     fig = gv.render((), backend='bokeh')
+#     air_temperature = gv.Dataset(dataset, ['longitude', 'latitude'], 'air_temperature')
+# #     fig = gv.render((), backend='bokeh')
 
-    st.bokeh_chart(air_temperature.to.image().options(cmap="coolwarm", clim=(-6., 6.)), use_container_width=True)
+#     st.bokeh_chart(air_temperature.to.image().options(cmap="coolwarm", clim=(-6., 6.)), use_container_width=True)
 
 # This sidebar UI lets the user select parameters for ClimateBench.
 def emissions_ui():

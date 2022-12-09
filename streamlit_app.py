@@ -92,14 +92,14 @@ def main():
 
     fig, ax = plt.subplots(subplot_kw={'projection': ccrs.PlateCarree()}, figsize=(11,8.5))
     
-    dataset.plot(ax=ax, cmap='coolwarm')
+#     dataset.plot(ax=ax, cmap='coolwarm')
 
-    st.pyplot(fig)
+#     st.pyplot(fig)
     
 #     # Draw the header and image.
-#     st.subheader("Real-time Climate Simulations")
-#     # st.markdown("**ClimateBench Emulator** (CO2 `%3.1f`) (CH4 `%3.1f`)" % (co2, ch4))
-#     st.markdown(f"Global mean temperature change: {global_mean(dataset):3.1f}K +/- {uncertainty:3.1f}K")
+    st.subheader("Real-time Climate Simulations")
+    st.markdown("**ClimateBench Emulator** (CO2 `%3.1f`) (CH4 `%3.1f`)" % (co2, ch4))
+    st.markdown(f"Global mean temperature change: {global_mean(dataset):3.1f}K +/- {uncertainty:3.1f}K")
 
 #     air_temperature = gv.Dataset(dataset, ['longitude', 'latitude'], 'air_temperature')
 # #     fig = gv.render((), backend='bokeh')

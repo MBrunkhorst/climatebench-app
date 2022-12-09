@@ -85,8 +85,8 @@ def main():
         download_file(filename)
 
     # Get the temperature  and uncertainty from the emulator
-#     temperature, uncertainty = climatebench_gp(co2, ch4, so2, bc)
-    temperature, uncertainty = np.zeros((96, 144), dtype=float), 1.0
+    temperature, uncertainty = climatebench_gp(co2, ch4, so2, bc)
+#     temperature, uncertainty = np.zeros((96, 144), dtype=float), 1.0
     x, y = np.linspace(0, 360, 144), np.linspace(-90, 90, 96)
     dataset = xr.DataArray(temperature, coords={'latitude': (('latitude',), y), 'longitude': (('longitude',), x)})
 

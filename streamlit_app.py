@@ -90,8 +90,8 @@ def main():
     x, y = np.linspace(0, 360, 144), np.linspace(-90, 90, 96)
     dataset = xr.DataArray(temperature, coords={'latitude': (('latitude',), y), 'longitude': (('longitude',), x)})
 
-#     fig, ax = plt.subplots(subplot_kw={'projection': ccrs.PlateCarree()}, figsize=(11,8.5))
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(subplot_kw={'projection': ccrs.PlateCarree()}, figsize=(11,8.5))
+#     fig, ax = plt.subplots()
     
     dataset.plot(ax=ax, cmap='coolwarm', vmax=6.)
 

@@ -1,4 +1,5 @@
 scipy
+bokeh<=2.2.2
 geoviews
 xarray
 tensorflow

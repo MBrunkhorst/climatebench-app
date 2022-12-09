@@ -93,7 +93,7 @@ def main():
 #     fig, ax = plt.subplots(subplot_kw={'projection': ccrs.PlateCarree()}, figsize=(11,8.5))
     fig, ax = plt.subplots()
     
-    dataset.plot(ax=ax)
+    dataset.plot(ax=ax, cmap='coolwarm', vmax=6.)
 
     st.pyplot(fig)
     

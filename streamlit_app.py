@@ -92,7 +92,7 @@ def main():
 
     #     # Draw the header and image.
     st.subheader("Real-time Climate Simulations")
-    st.markdown("**ClimateBench Emulator** (CO2 `%3.1f`) (CH4 `%3.1f`)" % (co2, ch4))
+    # st.markdown("**ClimateBench Emulator** (CO2 `%3.1f`) (CH4 `%3.1f`)" % (co2, ch4))
     st.markdown(f"Global mean temperature change: {global_mean(dataset):3.1f}K +/- {uncertainty:3.1f}K")
     
     ## FIXME: Using a cartopy proijection breaks streamlit...
@@ -111,12 +111,14 @@ def main():
 
 # This sidebar UI lets the user select parameters for ClimateBench.
 def emissions_ui():
-    st.sidebar.markdown("# Emissions")
-    co2 = st.sidebar.slider("CO2 concentrations (GtCO2)", 0.0, max_co2, 1800., 10.)
-    ch4 = st.sidebar.slider("Methane emissions (GtCH4 / year)", 0.0, max_ch4, 0.3, 0.005)
+    st.sidebar.markdown("# Atmospheric Gases")
+    co2 = st.sidebar.slider("Carbon Dioxide - CO2 (GtCO2)", 0.0, max_co2, 1800., 10.)
+    ch4 = st.sidebar.slider("Methane - CH4 (GtCH4)", 0.0, max_ch4, 0.3, 0.005)
     #  Just use global mean values for aerosol for simplicity
-    so2 = st.sidebar.slider("SO2 emissions (TgSO2 / year)", 0.0, max_so2, 85., 1.)
-    bc = st.sidebar.slider("BC emissions (TgBC / year)", 0.0, max_bc, 7., 0.1)
+    so2 = st.sidebar.slider("Sulfur Dioxide - SO2 (TgSO2)", 0.0, max_so2, 85., 1.)
+    bc = 7.
+    N2 = st.sidebar.slider("Nitrogen - N2 (GtN2)", 0.0, 100.0, 50., 1.)
+    O2 = st.sidebar.slider("Oxygen - O2 (GtN2)", 0.0, 100.0, 50., 1.)
     return normalize_inputs([co2, ch4, so2, bc])
 
 

@@ -20,11 +20,11 @@ max_bc = 9.
 
 
 def normalize_inputs(data):
-    return np.asarray(data) / np.asarray([max_co2, max_ch4, max_so2, max_so2])
+    return np.asarray(data) / np.asarray([max_co2, max_ch4, max_so2, max_bc])
 
 
 def unnormalize_outputs(data):
-    return np.asarray(data) * np.asarray([max_co2, max_ch4, max_so2, max_so2])
+    return np.asarray(data) * np.asarray([max_co2, max_ch4, max_so2, max_bc])
 
 
 def global_mean(ds):

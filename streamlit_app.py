@@ -116,7 +116,7 @@ def emissions_ui():
     ch4 = st.sidebar.slider("Methane - CH4 (GtCH4)", 0.0, max_ch4, 0.3, 0.005)
     #  Just use global mean values for aerosol for simplicity
     so2 = st.sidebar.slider("Sulfur Dioxide - SO2 (TgSO2)", 0.0, max_so2, 85., 1.)
-    bc = 7.
+    bc = st.sidebar.slider("BC emissions (TgBC / year)", 0.0, max_bc, 7., 0.1)
     N2 = st.sidebar.slider("Nitrogen - N2 (GtN2)", 0.0, 100.0, 50., 1.)
     O2 = st.sidebar.slider("Oxygen - O2 (GtN2)", 0.0, 100.0, 50., 1.)
     return normalize_inputs([co2, ch4, so2, bc])

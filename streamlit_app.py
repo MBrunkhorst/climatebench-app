@@ -92,7 +92,7 @@ def main():
 
     #     # Draw the header and image.
     st.subheader("Real-time Climate Simulations")
-    # st.markdown("**ClimateBench Emulator** (CO2 `%3.1f`) (CH4 `%3.1f`)" % (co2, ch4))
+    st.markdown("**ClimateBench Emulator** (CO2 `%3.1f`) (CH4 `%3.1f`) (SO2 `%3.1f`) (BC `%3.1f`)" % (co2, ch4, so2, bc))
     st.markdown(f"Global mean temperature change: {global_mean(dataset):3.1f}K +/- {uncertainty:3.1f}K")
     
     ## FIXME: Using a cartopy proijection breaks streamlit...
